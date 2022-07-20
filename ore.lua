@@ -2,6 +2,13 @@ if game.PlaceId == 10057350313 then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
     local Window = OrionLib:MakeWindow({Name = "💎 Ore Smelting Tycoon | By l1pezim#9999", HidePremium = true, IntroText = "L1pezimProd", SaveConfig = true, ConfigFolder = "L1pezimProd"})
     
+    OrionLib:MakeNotification({
+        Name = "Discord",
+        Content = "https://discord.gg/hTHUuXZu6j",
+        Image = "rbxassetid://4483345998",
+        Time = 1000000000
+    })
+
     --valores
     _G.autoCollectCoal = true
     _G.AutoCollectTin = true
@@ -215,13 +222,6 @@ if game.PlaceId == 10057350313 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
           end    
     })
-    
-    TeleportTab:AddButton({
-        Name = "Smelter",
-        Callback = function(Value)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-80.0589447, 3.19999862, 326.684418, -0.999954939, 7.30575245e-09, -0.00949401595, 7.26474614e-09, 1, 4.35365743e-09, 0.00949401595, 4.28448965e-09, -0.999954939)
-          end    
-    })
 
     FarmTab:AddToggle({
         Name = "AutoCollectPlatinum",
@@ -230,13 +230,6 @@ if game.PlaceId == 10057350313 then
             _G.AutoCollectPlatinum = Value
             AutoCollectPlatinum()
         end    
-    })
-    
-    TeleportTab:AddButton({
-        Name = "Collector",
-        Callback = function(Value)
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-127.544861, 3.19999862, 298.945312, -0.00970967487, -7.22243172e-08, 0.999952853, -8.58378613e-08, 1, 7.13942256e-08, -0.999952853, -8.51405986e-08, -0.00970967487)
-          end    
     })
     
     FarmTab:AddToggle({
@@ -249,7 +242,7 @@ if game.PlaceId == 10057350313 then
     })
     
     TeleportTab:AddButton({
-        Name = "2x Ore",
+        Name = "2x Ore Easy Obby",
         Callback = function(Value)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-192.587097, 3.19999862, -20.8526249, 0.0408362187, -6.5344814e-09, -0.999165833, 4.74131383e-08, 1, -4.60214666e-09, 0.999165833, -4.71856545e-08, 0.0408362187)
           end    
@@ -263,6 +256,16 @@ if game.PlaceId == 10057350313 then
             AutoCollectEmerald()
         end    
     })
+
+    TeleportTab:AddButton({
+        Name = "2x Ore Hard Obby",
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(192.366043, 3.19999862, -6.84762907, -0.0313749239, 5.10218812e-11, -0.999507666, -4.714834030-08, 1, 1.53105129e-09, 0.999507666, 4.71731632e-08, -0.0313749239)
+          end    
+    })
     
+
+
+
 end
 OrionLib:Init()
